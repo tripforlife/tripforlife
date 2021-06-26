@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include tripforlife *.css
+recursive-include tripforlife *.csv
+recursive-include tripforlife *.html
+recursive-include tripforlife *.ico
+recursive-include tripforlife *.js
+recursive-include tripforlife *.json
+recursive-include tripforlife *.md
+recursive-include tripforlife *.png
+recursive-include tripforlife *.py
+recursive-include tripforlife *.svg
+recursive-include tripforlife *.txt
+recursive-exclude tripforlife *.pyc
