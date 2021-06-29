@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "autoname": "format:{tent_name}-{camp}",
+ "creation": "2021-06-27 09:28:03.767704",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "camp",
+  "tent_name",
+  "occupancy",
+  "price",
+  "no_of_tents"
+ ],
+ "fields": [
+  {
+   "fieldname": "camp",
+   "fieldtype": "Link",
+   "label": "Camp",
+   "options": "Camps"
+  },
+  {
+   "fieldname": "occupancy",
+   "fieldtype": "Int",
+   "label": "Occupancy"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price"
+  },
+  {
+   "fieldname": "tent_name",
+   "fieldtype": "Data",
+   "label": "Tent Name"
+  },
+  {
+   "fieldname": "no_of_tents",
+   "fieldtype": "Int",
+   "label": "No Of Tents"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Item",
+   "link_doctype": "Tent Item",
+   "link_fieldname": "tent"
+  }
+ ],
+ "modified": "2021-06-28 02:18:48.278005",
+ "modified_by": "Administrator",
+ "module": "Tripforlife",
+ "name": "Tents",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Camp Owner",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Camp Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Executive",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
