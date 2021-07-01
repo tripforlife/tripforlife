@@ -6,7 +6,10 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "camp_name"
+  "camp_name",
+  "is_published",
+  "route",
+  "activities"
  ],
  "fields": [
   {
@@ -14,16 +17,35 @@
    "fieldtype": "Data",
    "label": "Camp Name",
    "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "is Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "activities",
+   "fieldtype": "Table",
+   "label": "Activities",
+   "options": "Camp Activity Item"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [
   {
    "link_doctype": "Tents",
    "link_fieldname": "camp"
   }
  ],
- "modified": "2021-06-28 02:00:34.245653",
+ "modified": "2021-07-01 12:13:12.096369",
  "modified_by": "Administrator",
  "module": "Tripforlife",
  "name": "Camps",
@@ -74,6 +96,7 @@
    "share": 1
   }
  ],
+ "route": "camps",
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "creation": "2021-07-01 12:12:47.560345",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activity_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "activity_name",
+   "fieldtype": "Link",
+   "label": "Activity Name",
+   "options": "Camp Activities"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-01 12:12:47.560345",
+ "modified_by": "Administrator",
+ "module": "Tripforlife",
+ "name": "Camp Activity Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
