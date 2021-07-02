@@ -1,11 +1,7 @@
 // Copyright (c) 2021, Vamsi Krishna and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Orders', {
-	// refresh: function(frm) {
 
-	// }
-});
 
 frappe.ui.form.on("Orders", "onload", function(frm) {
     frm.set_query("tent","tents",function() {
