@@ -7,10 +7,16 @@
  "engine": "InnoDB",
  "field_order": [
   "camp_name",
+  "camp_owner",
+  "price",
+  "column_break_4",
   "is_published",
+  "is_featured",
   "route",
+  "section_break_8",
+  "description",
   "activities",
-  "price"
+  "facilities"
  ],
  "fields": [
   {
@@ -40,6 +46,37 @@
    "fieldname": "price",
    "fieldtype": "Currency",
    "label": "Price"
+  },
+  {
+   "fieldname": "camp_owner",
+   "fieldtype": "Link",
+   "label": "Camp Owner",
+   "options": "User"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_featured",
+   "fieldtype": "Check",
+   "label": "is Featured "
+  },
+  {
+   "fieldname": "facilities",
+   "fieldtype": "Table",
+   "label": "Facilities",
+   "options": "Camp Facility Item"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
   }
  ],
  "has_web_view": 1,
@@ -51,7 +88,7 @@
    "link_fieldname": "camp"
   }
  ],
- "modified": "2021-07-03 10:19:27.513126",
+ "modified": "2021-07-03 12:59:31.671230",
  "modified_by": "Administrator",
  "module": "Tripforlife",
  "name": "Camps",

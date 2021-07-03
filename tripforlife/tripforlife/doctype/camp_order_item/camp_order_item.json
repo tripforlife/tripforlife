@@ -18,7 +18,7 @@
    "label": "Qty"
   },
   {
-   "fetch_from": "tent.price",
+   "fetch_from": "camp.price",
    "fetch_if_empty": 1,
    "fieldname": "rate",
    "fieldtype": "Currency",
@@ -41,13 +41,8 @@
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
- "links": [
-  {
-   "link_doctype": "Orders",
-   "link_fieldname": "tents"
-  }
- ],
- "modified": "2021-07-03 10:18:24.854237",
+ "links": [],
+ "modified": "2021-07-03 10:37:54.191598",
  "modified_by": "Administrator",
  "module": "Tripforlife",
  "name": "Camp Order Item",
