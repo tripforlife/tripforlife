@@ -68,12 +68,12 @@ frappe.ui.form.on('Orders',  {
     } 
 });
 var net_total = 0 ;
-frappe.ui.form.on('Tent Item',  {
+frappe.ui.form.on('Camp Order Item',  {
     qty: function(frm, cdt, cdn) {
          net_total = 0 ;
          var d = locals[cdt][cdn];
          frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
-         frm.doc.tents.forEach(function(y) {
+         frm.doc.camp.forEach(function(y) {
             // calculate incentive
            // frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
             net_total = net_total + y.amount ;
@@ -93,7 +93,7 @@ frappe.ui.form.on('Tent Item',  {
          net_total = 0 ;
          var x = locals[cdt][cdn];
          frappe.model.set_value(x.doctype, x.name, 'amount', (x.qty * x.rate));
-         frm.doc.tents.forEach(function(y) {
+         frm.doc.camp.forEach(function(y) {
             // calculate incentive
            // frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
             net_total = net_total + y.amount ;
@@ -117,7 +117,7 @@ frappe.ui.form.on('Activity Item',  {
          net_total = 0 ;
          var d = locals[cdt][cdn];
          frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
-         frm.doc.tents.forEach(function(y) {
+         frm.doc.camp.forEach(function(y) {
             // calculate incentive
            // frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
             net_total = net_total + y.amount ;
@@ -136,7 +136,7 @@ frappe.ui.form.on('Activity Item',  {
          net_total = 0 ;
          var x = locals[cdt][cdn];
          frappe.model.set_value(x.doctype, x.name, 'amount', (x.qty * x.rate));
-         frm.doc.tents.forEach(function(y) {
+         frm.doc.camp.forEach(function(y) {
             // calculate incentive
            // frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
             net_total = net_total + y.amount ;
@@ -160,7 +160,7 @@ frappe.ui.form.on('Activity Item',  {
 frappe.ui.form.on('Orders',  {
     advance_amount:function(frm) {
          net_total = 0 ;
-         $.each(frm.doc.tents,  function(i,  d) {
+         $.each(frm.doc.camp,  function(i,  d) {
             // calculate incentive
             d.amount = d.rate * d.qty;
             net_total = net_total + d.amount ;
