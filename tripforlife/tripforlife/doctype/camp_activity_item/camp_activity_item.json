@@ -11,6 +11,7 @@
   {
    "fieldname": "activity_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Activity Name",
    "options": "Camp Activities"
   }
@@ -18,7 +19,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-07-01 12:12:47.560345",
+ "modified": "2021-07-03 10:21:20.784225",
  "modified_by": "Administrator",
  "module": "Tripforlife",
  "name": "Camp Activity Item",

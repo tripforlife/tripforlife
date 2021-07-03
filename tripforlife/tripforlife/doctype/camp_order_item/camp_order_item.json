@@ -5,19 +5,12 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "tent",
+  "camp",
   "qty",
   "rate",
   "amount"
  ],
  "fields": [
-  {
-   "fieldname": "tent",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Tent",
-   "options": "Tents"
-  },
   {
    "fieldname": "qty",
    "fieldtype": "Int",
@@ -37,6 +30,13 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Amount"
+  },
+  {
+   "fieldname": "camp",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Camp",
+   "options": "Camps"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -47,10 +47,10 @@
    "link_fieldname": "tents"
   }
  ],
- "modified": "2021-06-29 16:49:35.107859",
+ "modified": "2021-07-03 10:18:24.854237",
  "modified_by": "Administrator",
  "module": "Tripforlife",
- "name": "Tent Item",
+ "name": "Camp Order Item",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

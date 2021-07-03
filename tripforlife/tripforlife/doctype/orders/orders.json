@@ -128,7 +128,7 @@
    "fieldname": "tents",
    "fieldtype": "Table",
    "label": "Tents",
-   "options": "Tent Item"
+   "options": "Camp Order Item"
   },
   {
    "fieldname": "section_break_12",
@@ -175,7 +175,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-06-28 11:05:37.023368",
+ "modified": "2021-07-03 10:18:48.516202",
  "modified_by": "Administrator",
  "module": "Tripforlife",
  "name": "Orders",
