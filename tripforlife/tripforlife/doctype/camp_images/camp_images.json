@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "creation": "2021-07-03 13:51:12.040171",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "image_text",
+  "image"
+ ],
+ "fields": [
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image",
+   "reqd": 1
+  },
+  {
+   "fieldname": "image_text",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Image Text",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-03 14:07:14.042048",
+ "modified_by": "Administrator",
+ "module": "Tripforlife",
+ "name": "Camp Images",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
