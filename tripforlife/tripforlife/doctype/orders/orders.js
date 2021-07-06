@@ -45,6 +45,11 @@ frappe.ui.form.on('Orders',  {
             d.amount = d.rate * d.qty;
             net_total = net_total + d.amount ;
         });
+        $.each(frm.doc.tour,  function(i,  d) {
+            // calculate incentive
+            d.amount = d.rate * d.qty;
+            net_total = net_total + d.amount ;
+        });
         frm.doc.total_amount = net_total;
         frm.doc.balance_amount = frm.doc.total_amount - frm.doc.advance_amount;
         frm.refresh();
@@ -84,6 +89,11 @@ frappe.ui.form.on('Camp Order Item',  {
            // frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
             net_total = net_total + y.amount ;
         });
+        $.each(frm.doc.tour,  function(i,  d) {
+            // calculate incentive
+            d.amount = d.rate * d.qty;
+            net_total = net_total + d.amount ;
+        });
         frm.doc.total_amount = net_total;
         frm.doc.balance_amount = frm.doc.total_amount - frm.doc.advance_amount;
         frm.refresh();
@@ -103,6 +113,11 @@ frappe.ui.form.on('Camp Order Item',  {
             // calculate incentive
            // frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
             net_total = net_total + y.amount ;
+        });
+        $.each(frm.doc.tour,  function(i,  d) {
+            // calculate incentive
+            d.amount = d.rate * d.qty;
+            net_total = net_total + d.amount ;
         });
         frm.doc.total_amount = net_total;
         frm.doc.balance_amount = frm.doc.total_amount - frm.doc.advance_amount;
@@ -128,6 +143,11 @@ frappe.ui.form.on('Activity Item',  {
            // frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
             net_total = net_total + y.amount ;
         });
+        $.each(frm.doc.tour,  function(i,  d) {
+            // calculate incentive
+            d.amount = d.rate * d.qty;
+            net_total = net_total + d.amount ;
+        });
         frm.doc.total_amount = net_total;
         frm.doc.balance_amount = frm.doc.total_amount - frm.doc.advance_amount;
         frm.refresh();
@@ -147,6 +167,11 @@ frappe.ui.form.on('Activity Item',  {
            // frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
             net_total = net_total + y.amount ;
         });
+        $.each(frm.doc.tour,  function(i,  d) {
+            // calculate incentive
+            d.amount = d.rate * d.qty;
+            net_total = net_total + d.amount ;
+        });
         frm.doc.total_amount = net_total;
         frm.doc.balance_amount = frm.doc.total_amount - frm.doc.advance_amount;
         frm.refresh();
@@ -154,7 +179,58 @@ frappe.ui.form.on('Activity Item',  {
      } 
     
 });
-
+frappe.ui.form.on('Tour Item',  {
+    qty: function(frm, cdt, cdn) {
+         net_total = 0 ;
+         var d = locals[cdt][cdn];
+         frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
+         frm.doc.camp.forEach(function(y) {
+            // calculate incentive
+           // frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
+            net_total = net_total + y.amount ;
+        });
+        net_total = frm.doc.no_of_days * net_total;
+        frm.doc.activities.forEach(function(y) {
+            // calculate incentive
+           // frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
+            net_total = net_total + y.amount ;
+        });
+        $.each(frm.doc.tour,  function(i,  d) {
+            // calculate incentive
+            d.amount = d.rate * d.qty;
+            net_total = net_total + d.amount ;
+        });
+        frm.doc.total_amount = net_total;
+        frm.doc.balance_amount = frm.doc.total_amount - frm.doc.advance_amount;
+        frm.refresh();
+     } ,
+    rate: function(frm, cdt, cdn) {
+         net_total = 0 ;
+         var x = locals[cdt][cdn];
+         frappe.model.set_value(x.doctype, x.name, 'amount', (x.qty * x.rate));
+         frm.doc.camp.forEach(function(y) {
+            // calculate incentive
+           // frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
+            net_total = net_total + y.amount ;
+        });
+        net_total = frm.doc.no_of_days * net_total;
+        frm.doc.activities.forEach(function(y) {
+            // calculate incentive
+           // frappe.model.set_value(d.doctype, d.name, 'amount', (d.qty * d.rate));
+            net_total = net_total + y.amount ;
+        });
+        $.each(frm.doc.tour,  function(i,  d) {
+            // calculate incentive
+            d.amount = d.rate * d.qty;
+            net_total = net_total + d.amount ;
+        });
+        frm.doc.total_amount = net_total;
+        frm.doc.balance_amount = frm.doc.total_amount - frm.doc.advance_amount;
+        frm.refresh();
+        
+     } 
+    
+});
 
 
 frappe.ui.form.on('Orders',  {
@@ -167,6 +243,11 @@ frappe.ui.form.on('Orders',  {
         });
         net_total = frm.doc.no_of_days * net_total;
         $.each(frm.doc.activities,  function(i,  d) {
+            // calculate incentive
+            d.amount = d.rate * d.qty;
+            net_total = net_total + d.amount ;
+        });
+        $.each(frm.doc.tour,  function(i,  d) {
             // calculate incentive
             d.amount = d.rate * d.qty;
             net_total = net_total + d.amount ;
