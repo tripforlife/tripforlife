@@ -22,6 +22,8 @@
   "camp",
   "activity_booking_details_section",
   "activities",
+  "tour_booking_details_section",
+  "tour",
   "section_break_12",
   "column_break_17",
   "total_amount",
@@ -162,12 +164,23 @@
    "fieldtype": "Table",
    "label": "Camp",
    "options": "Camp Order Item"
+  },
+  {
+   "fieldname": "tour_booking_details_section",
+   "fieldtype": "Section Break",
+   "label": "Tour Booking Details"
+  },
+  {
+   "fieldname": "tour",
+   "fieldtype": "Table",
+   "label": "Tour",
+   "options": "Tour Item"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-07-03 10:28:41.750693",
+ "modified": "2021-07-06 22:12:23.449042",
  "modified_by": "Administrator",
  "module": "Tripforlife",
  "name": "Orders",

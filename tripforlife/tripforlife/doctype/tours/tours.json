@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "autoname": "field:tour_name",
+ "creation": "2021-07-06 17:57:25.802010",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tour_name",
+  "price",
+  "starting_place",
+  "destination",
+  "ending_place"
+ ],
+ "fields": [
+  {
+   "fieldname": "tour_name",
+   "fieldtype": "Data",
+   "label": "Tour Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price"
+  },
+  {
+   "fieldname": "starting_place",
+   "fieldtype": "Data",
+   "label": "Starting Place"
+  },
+  {
+   "fieldname": "destination",
+   "fieldtype": "Data",
+   "label": "Destination"
+  },
+  {
+   "fieldname": "ending_place",
+   "fieldtype": "Data",
+   "label": "Ending Place"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-06 17:57:55.639718",
+ "modified_by": "Administrator",
+ "module": "Tripforlife",
+ "name": "Tours",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
